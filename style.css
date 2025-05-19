@@ -1,0 +1,329 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins",sans-serif;
+    color:#fff
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    min-height:100vh;
+    background: url("img/background.avif");
+    background-size: cover;
+    background-position:center;
+}
+.container{
+    position:relative;
+    width:400px;
+    background-color:rgba(255,255,255,.1);
+    backdrop-filter: blur(30px);
+    border:2px solid rgba(255,255,255,.2);
+    border-radius: 16px;
+    padding:20px;
+    color:#fff;
+    transition:height .6s ease;
+}
+.container:not(#wear){
+    height:100px;
+}
+
+
+
+
+
+.search-box{
+    position:relative;
+    width:100%;
+    height:55px;
+    display:flex;
+    align-items:center;
+}
+.search-box i{
+    position:absolute;
+    left:10px;
+    font-size: 28px;
+}
+.search-box input{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background: transparent;
+    border:2px solid rgba(256,256,256,0.2);
+    outline:none;
+    border-radius: 10px;
+    font-size: 22px;
+    color:#fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding:0 48px 0 42px;
+}
+.search-box input::placeholder{
+    color:white;
+    text-transform: capitalize;
+}
+.search-box button{
+    position: absolute;
+    right:0;
+    width:40px;
+    height:100%;
+    background: transparent;
+    border:none;
+    outline:none;
+    font-size: 28px;
+    color:white;
+    padding:0 40px 0 5px;
+    cursor:pointer
+}
+.weather-box{
+    text-align: center;
+    margin:40px 0;
+}
+.weather-box,.weather-details,.not-found{
+    overflow: hidden;
+    visibility: hidden;
+}
+.weather-box.active,.weather-details.active,.not-found.active{
+    visibility:visible;
+}
+
+.weather-box img{
+    width:60%;
+
+}
+.weather-box .temperature{
+    font-size: 64px;
+    line-height: 1;
+    font-weight: 700;
+    margin: 20px 0px 6px -30px;
+}
+.weather-box .temperature span{
+    font-weight: 600;
+    margin-left: 4px;
+
+}
+.weather-box .description{
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+
+}
+.weather-details {
+    margin-bottom: 40px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+}
+.weather-details .humidity,
+.weather-details .wind{
+    display:flex;
+    align-items:center;
+    width:50%;
+}
+
+.weather-details .humidity{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+.weather-details .wind{
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+.weather-details i{
+    font-size: 56px;
+    margin-right: 10px;
+
+}
+.weather-details span{
+    display:inline-block;
+    font-size: 22px;
+    font-weight: 500;
+}
+.weather-details .p{
+    font-size: 14px;
+    font-weight: 500;
+
+}
+.not-found{
+    position:absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    text-align: center;
+    margin-top: 110px;
+}
+.not-found img{
+    width:65%;
+}
+.not-found p{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+
+}
+.city-hide{
+    display: none;
+}
+
+.wear_header{
+    margin-bottom: 10px;
+}
+#wear{
+    margin-top:10px;
+    margin-left: 0px;
+    left:0;
+}
+.wear_grid{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px;
+}
+.clothes-card{
+    display:flex;
+    flex-direction: column;
+    background-repeat: no-repeat !important;
+    background-position:center 55% !important;
+    background-size:55% !important;
+    box-shadow: 2px 2px #00000088;
+    border:1px solid #00000055;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+.clothes-card h3{
+    margin-top:5px;
+    text-align: center;
+    font-weight: 600;
+
+}
+.clothes-card img{
+    color:white;
+    justify-self:center;
+    align-self:center;
+    width:55%;
+}
+.wrapper{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+#first-container{
+    height:555px;
+}
+@media (max-width:575px){
+    .wrapper{
+        margin:0;
+    }
+    body{
+        display:block;
+        background:none;
+        background-color:#21044b;
+    }
+    .container{
+        background-color: transparent;
+        backdrop-filter: none;
+        border:0;
+        padding: 0;
+        max-width:100vw;
+    }
+    .weather{
+        max-width:100vw;
+    }
+    .search-box{
+        max-width:100vw;
+    }
+    .weather-details.active{
+        flex-direction: column;
+    }
+    .weather-details .humidity{
+        margin: 0;
+        padding: 0;
+    }
+    .wear_grid{
+        grid-template-columns: 1fr;
+        margin: 0;
+        padding: 0;
+        gap:0;
+    }
+    .clothes-card{
+        border:none;
+        flex-direction: row;
+        width:100%;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 15px;
+        box-shadow: none;
+    }
+    #first-container{
+        height:600px !important
+    }
+    .info-wind{
+        text-wrap: nowrap;
+    }
+}
+.loader {
+  width: 40px !important;
+  padding: 8px !important;
+  margin-right: 5px;
+  height:40px !important;
+  border-radius: 50%;
+  background: #fff !important;
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m)!important;
+          mask: var(--_m) !important;
+  -webkit-mask-composite: source-out!important;
+          mask-composite: subtract!important;
+  animation: l3 1s infinite linear!important;
+}
+@keyframes l3 {to{transform: rotate(1turn)}}
+@media (min-width:1921px ) and (max-width:3839px){
+    .container{
+        transform:scale(2);
+    }
+    #wear{
+        margin-top: 575px;
+    }
+}
+@media (min-width:3840px ) and (max-width:7679px){
+    .container{
+        transform:scale(4);
+    }
+    #wear{
+        margin-top: 1480px;
+    }
+}
+@media (min-width:7680px ){
+    .container{
+        transform:scale(8);
+    }
+    #wear{
+        margin-top: 3460px;
+    }
+}

@@ -54,6 +54,38 @@ body{
 }
 
 
+@font-face {
+    font-family: boxicons;
+    font-weight: 400;
+    font-style: normal;
+    src: url(../fonts/boxicons.woff2);
+}
+
+.bx {
+    font-family: boxicons !important;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    display: inline-block;
+    text-transform: none;;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.bxs-map:before {
+    content: "\ee17"
+}
+.bx-search:before {
+    content: "\ebf7"
+}
+.bx-water:before {
+    content: "\ec7a"
+}
+.bx-wind:before {
+    content: "\ec81"
+}
 
 
 

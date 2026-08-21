@@ -1,0 +1,17 @@
+.not-found {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.875rem;
+    margin-bottom: 0.625rem;
+}
+  
+.not-found img {
+    width: 65%;
+    max-width: 11.25rem
+}
+  
+.not-found p {
+    font-size: 1.375rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+}

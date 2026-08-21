@@ -1,0 +1,20 @@
+.clothes-card{
+    display:flex;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.clothes-card img{
+    width: 60%;
+}
+
+@media screen and (min-height: 576px){
+    .clothes-card{
+        flex-direction: column;
+        gap:5px;
+        box-shadow: 2px 2px #00000088;
+        border:1px solid #00000055;
+        padding-top: 15px;
+        padding-bottom: 5px;
+    }
+}

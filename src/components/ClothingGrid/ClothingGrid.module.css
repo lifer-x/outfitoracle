@@ -1,0 +1,9 @@
+.wear_header{
+    margin-bottom: 0.625rem;
+}
+
+.wear_grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(10.01rem, 1fr));
+    gap:1rem;
+}

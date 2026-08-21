@@ -1,0 +1,42 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "env": {
+    "browser": true
+  },
+
+  "categories": {
+    "correctness": "error",
+    "perf": "error",
+    "suspicious": "error",
+    "pedantic": "error",
+    "style": "error",
+    "nursery": "warn",
+  },
+  "options": {
+    "typeAware": true,
+    "denyWarnings": true
+  },
+  "rules": {
+    "eslint/no-unused-vars": "error",
+    "typescript/prefer-readonly-parameter-types": "off",
+    "eslint/sort-keys": "off",
+    "eslint/no-ternary": "off",
+    "eslint/one-var": "off",
+    "eslint/sort-imports": "off",
+    "eslint/no-magic-numbers": [
+      "error", 
+      { 
+        "ignore": [0, 1] 
+      }
+    ],
+    "unicorn/filename-case": [
+      "error",
+      {
+        "cases": {
+          "kebabCase": true,
+          "pascalCase": true
+        }
+      }
+    ]
+  }
+}

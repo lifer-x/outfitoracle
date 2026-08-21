@@ -1,4 +1,4 @@
-# ☀️ Outfit Oracle (Vite + React + TypeScript)
+# ☀️ Outfit Oracle
 
 **Outfit Oracle** is a modern, ultra-fast weather client that not only displays current meteorological data but also smart-calculates the perceived temperature to suggest the perfect outfit from your wardrobe. 
 
